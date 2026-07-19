@@ -45,7 +45,7 @@ Hoje concentro minha carreira no desenvolvimento de aplicações, automação de
 ## 🕹️ Atividade no GitHub (Pacman)
 
 <p align="left">
-  <img src="https://raw.githubusercontent.com/developertiagosilva/developertiagosilva/main/pacman.svg" alt="Pacman GitHub Activity" width="100%">
+  <img src="https://raw.githubusercontent.com/developertiagosilva/developertiagosilva/output/pacman-contribution-graph.svg" alt="Pacman GitHub Activity" width="100%">
 </p>
 
 ---
