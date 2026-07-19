@@ -1,24 +1,27 @@
 name: Generate Pacman GitHub Activity
 
 on:
-  schedule: # Roda automaticamente todos os dias à meia-noite
+  schedule:
     - cron: "0 0 * * *"
-  workflow_dispatch: # Permite que você rode manualmente
+  workflow_dispatch:
 
 jobs:
-  generate:
+  github-metrics:
     runs-on: ubuntu-latest
+    permissions:
+      contents: write
     steps:
       - name: Pacman Animation
-        uses: jasonlong/github-readme-pacman@main
+        uses: lowlighter/metrics@latest
         with:
-          github_user_name: developertiagosilva
-          output: dist/pacman.svg
-
-      - name: Deploy to Output Branch
-        uses: crazy-max/ghaction-github-pages@v3.1.0
-        with:
-          target_branch: pacman-output
-          build_dir: dist
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          token: ${{ secrets.GITHUB_TOKEN }}
+          user: developertiagosilva
+          template: classic
+          base: ""
+          plugin_languages: yes
+          plugin_languages_ignored: html, css
+          plugin_lines: yes
+          filename: pacman.svg
+          config_output: svg
+          # Define o estilo visual clássico de commits em formato geométrico
+          config_twemojis: yes
