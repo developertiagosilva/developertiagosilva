@@ -23,5 +23,4 @@ jobs:
           plugin_lines: yes
           filename: pacman.svg
           config_output: svg
-          # Define o estilo visual clássico de commits em formato geométrico
-          config_twemojis: yes
+          config_twemoji: yes
